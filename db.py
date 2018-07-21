@@ -22,7 +22,7 @@ class Course(BaseModel):
     class Meta:
         table_name = "courses"
 
-    cursus = ForeignKeyField(Cursus, null=True)
+    cursus = ForeignKeyField(Cursus, null=True, backref="courses")
     semester = SmallIntegerField(default=0)
     name = CharField(max_length=64)
     short_name = CharField(max_length=16)
@@ -50,8 +50,8 @@ class Content(BaseModel):
     validated = SmallIntegerField(default=0)
     title = CharField(max_length=255, null=True)
     text = TextField()
-    cursus = ForeignKeyField(Cursus, null=True)
-    course = ForeignKeyField(Course, null=True)
+    cursus = ForeignKeyField(Cursus, null=True, backref="contents")
+    course = ForeignKeyField(Course, null=True, backref="contents")
     year = IntegerField(null=True)
     deleted = SmallIntegerField(default=0)
     created_at = DateTimeField(null=True)
@@ -82,7 +82,7 @@ class ContentFile(BaseModel):
 
 def assert_schema_ok():
     for table in (
-        Cursus, Course, Content, File, ContentFile,
+        Cursus, Course, Content, ContentType, File, ContentFile,
     ):
         table.get()
 

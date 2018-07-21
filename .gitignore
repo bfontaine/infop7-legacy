@@ -1,1 +1,3 @@
 *.sql
+/archive_data
+/all-files
