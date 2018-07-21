@@ -3,8 +3,8 @@
 This repository contains scripts I used to export data from a dump of [IP7][]’s
 [old website](https://github.com/IP7/Website-old).
 
-It mostly involves setting up a local MySQL server; importing the dump in it;
-translating the MySQL schema into [Peewee][]-style Python classes; then
+Most of the work involves setting up a local MySQL server; importing the dump
+in it; translating the MySQL schema into [Peewee][]-style Python classes; then
 exploiting the data.
 
 [IP7]: https://github.com/IP7
