@@ -1,0 +1,17 @@
+title: Dump Infop7
+email:
+description: > # this means to ignore newlines until "baseurl:"
+  Notes de cours, examens et partiels corrigés, TP et TD pour la Licence et le
+  Master Informatique de Paris Diderot.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dump-infop7.bfontaine.net" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: bfontn
+github_username:  bfontaine
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems: []
+exclude:
+  - Gemfile
+  - Gemfile.lock
