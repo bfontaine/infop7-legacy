@@ -14,7 +14,7 @@ def file_link(path, parent="all-archives"):
     size = get_human_size(os.path.join(parent, path))
 
     return """
-        <a class="filename" href="./archives/%s">%s</a> (%s)
+        <a class="filename" href="/archives/%s">%s</a> (%s)
         """.strip() % (path, path, size)
 
 
