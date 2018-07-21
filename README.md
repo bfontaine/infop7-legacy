@@ -4,10 +4,13 @@ This repository contains scripts I used to export data from a dump of [IP7][]’
 [old website](https://github.com/IP7/Website-old).
 
 It mostly involves setting up a local MySQL server; importing the dump in it;
-and translating the MySQL schema into [Peewee][]-style Python classes.
+translating the MySQL schema into [Peewee][]-style Python classes; then
+exploiting the data.
 
 [IP7]: https://github.com/IP7
 [Peewee]: http://docs.peewee-orm.com/en/latest/
+
+The files are now available online at <https://dump-infop7.bfontaine.net/>.
 
 ## Setup
 
