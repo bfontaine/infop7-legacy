@@ -16,7 +16,7 @@ The files are now available online at <https://dump-infop7.bfontaine.net/>.
 
 ### Install MySQL
 
-```
+```bash
 brew install mysql@5.5
 export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
 ```
@@ -24,18 +24,20 @@ export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
 Then follow Homebrew’s instructions for setting up a password for `root`.
 Export that password somewhere:
 
-```
+```bash
 export INFOP7_MYSQL_PASSWORD=...
 ```
 
+You can throw away that database after the dump.
+
 ### Import the dump
 
-```
+```bash
 mysql -uroot -p < the-dump.sql
 ```
 
 ### Python setup
 
-```
+```bash
 pip3 install -r requirements.txt
 ```
